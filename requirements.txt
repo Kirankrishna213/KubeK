@@ -1,1 +1,6 @@
-
+openai>=1.0.0
+python-dotenv>=0.19.0
+pyyaml>=5.4.1
+kubernetes>=24.2.0
+PyGithub>=1.55
+spacy>=3.0.0
