@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: nl-to-k8s-github
+    runtime: python
+    buildCommand: pip install -r requirements.txt && python -m spacy download en_core_web_sm
+    startCommand: gunicorn main:app
+    envVars:
+      - key: OPENAI_API_KEY
+        fromService: 
+          type: secret
+          name: openai_api_key
+      - key: GITHUB_TOKEN
+        fromService:
+          type: secret
+          name: github_token
+    plan: free
