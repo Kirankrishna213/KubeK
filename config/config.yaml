@@ -1,1 +1,25 @@
 
+openai:
+  model: "gpt-4"
+  temperature: 0.3
+  max_tokens: 500
+
+kubernetes:
+  default_context: "minikube"
+  allowed_commands:
+    - "get"
+    - "describe"
+    - "logs"
+    - "create"
+    - "delete"
+    - "apply"
+    - "scale"
+
+github:
+  allowed_operations:
+    - "list_repos"
+    - "create_repo"
+    - "delete_repo"
+    - "list_issues"
+    - "create_issue"
+    - "list_pull_requests"
