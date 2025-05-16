@@ -1,1 +1,11 @@
 
+contexts:
+  - name: "minikube"
+    description: "Local minikube cluster"
+    namespace: "default"
+  - name: "production"
+    description: "Production cluster"
+    namespace: "prod"
+  - name: "staging"
+    description: "Staging cluster"
+    namespace: "stage"
